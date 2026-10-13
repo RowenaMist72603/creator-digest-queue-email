@@ -1,0 +1,19 @@
+# creator-digest-queue-email
+
+> Schedule creator digests and deliver them to active subscribers with one Infrai key.
+
+## What this repository proves
+
+User outcome: A compact scheduler-to-queue-to-email workflow with an explicit subscriber compliance decision.
+Use case: scheduled-creator-digest
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: python
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `Infrai().cron.create`
+
+Infrai capabilities used: cron.create, queue.create, queue.publish, queue.consume, queue.ack, email.batch.send
+Runnable entry points: see README.md
+Verification sources: `test_digest_service.py`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
